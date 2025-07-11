@@ -1,7 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ChatPage from './pages/ChatPage'
+import ChatsPage from './pages/ChatsPage'
+import DiscoverPage from './pages/DiscoverPage'
+import FriendsPage from './pages/FriendsPage'
+import HelpPage from './pages/HelpPage'
 import HomePage from "./pages/HomePage"
 import LoginPage from "./pages/LoginPage"
 import NotFoundPage from './pages/NotFoundPage'
+import ProfilePage from './pages/ProfilePage'
+import SettingsPage from './pages/SettingsPage'
 import './App.css'
 
 function App() {
@@ -10,6 +17,13 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/login" element={<LoginPage />}/>
+        <Route path="/chat/:chatId" element={<ChatPage />}/>
+        <Route path="/chats" element={<ChatsPage />}/>
+        <Route path="/discover" element={<DiscoverPage />}/>
+        <Route path="/friends" element={<FriendsPage />}/>
+        <Route path="/help" element={<HelpPage />}/>
+        <Route path="/profile" element={<ProfilePage />}/>
+        <Route path="/settings" element={<SettingsPage />}/>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
