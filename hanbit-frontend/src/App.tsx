@@ -9,7 +9,6 @@ import LoginPage from "./pages/LoginPage"
 import NotFoundPage from './pages/NotFoundPage'
 import ProfilePage from './pages/ProfilePage'
 import SettingsPage from './pages/SettingsPage'
-import './App.css'
 
 function App() {
   return (
