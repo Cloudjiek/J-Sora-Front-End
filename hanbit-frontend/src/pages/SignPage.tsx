@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MotionImageSlider from "../components/SignPages/MotionImageSlider";
+import MotionImageSlider from "../components/SignPage/MotionImageSlider";
 import SignUpPage from "./sub pages/SignUpPage";
 import SignInPage from "./sub pages/SignInPage";
 

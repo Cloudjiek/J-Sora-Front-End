@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import ChatPage from './pages/ChatPage'
 import ChatsPage from './pages/ChatsPage'
 import DiscoverPage from './pages/DiscoverPage'
@@ -14,7 +14,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />}/>
+        <Route path="/" element={<Navigate to="home" replace />}/>
+        <Route path="/home" element={<HomePage />}/>
         <Route path="/join" element={<SignPage />}/>
         <Route path="/chat/:chatId" element={<ChatPage />}/>
         <Route path="/chats" element={<ChatsPage />}/>

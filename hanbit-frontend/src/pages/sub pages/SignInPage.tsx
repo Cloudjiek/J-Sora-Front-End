@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Input from "../../components/SignPages/Input";
-import Button from "../../components/SignPages/Button";
-import Logo from "../../components/SignPages/Logo";
+import Input from "../../components/SignPage/Input";
+import Button from "../../components/SignPage/Button";
+import Logo from "../../components/SignPage/Logo";
 
 type SignInPageProps = {
     onClick: React.MouseEventHandler<HTMLButtonElement>
