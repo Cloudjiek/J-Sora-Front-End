@@ -5,17 +5,17 @@ import DiscoverPage from './pages/DiscoverPage'
 import FriendsPage from './pages/FriendsPage'
 import HelpPage from './pages/HelpPage'
 import HomePage from "./pages/HomePage"
-import LoginPage from "./pages/LoginPage"
 import NotFoundPage from './pages/NotFoundPage'
 import ProfilePage from './pages/ProfilePage'
 import SettingsPage from './pages/SettingsPage'
+import SignPage from './pages/SignPage'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />}/>
-        <Route path="/login" element={<LoginPage />}/>
+        <Route path="/join" element={<SignPage />}/>
         <Route path="/chat/:chatId" element={<ChatPage />}/>
         <Route path="/chats" element={<ChatsPage />}/>
         <Route path="/discover" element={<DiscoverPage />}/>

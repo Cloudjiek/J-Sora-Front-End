@@ -1,11 +1,14 @@
 import { useState } from "react";
-import Input from "../components/LoginPage/Input";
-import Checkbox from "../components/LoginPage/Checkbox";
-import Button from "../components/LoginPage/Button";
-import MotionImageSlider from "../components/LoginPage/MotionImageSlider";
-import Logo from "../components/LoginPage/Logo";
+import Input from "../../components/SignPages/Input";
+import Checkbox from "../../components/SignPages/Checkbox";
+import Button from "../../components/SignPages/Button";
+import Logo from "../../components/SignPages/Logo";
 
-export default function LoginPage() {
+type SignUpPageProps = {
+    onClick: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+export default function SignUpPage({onClick}: SignUpPageProps) {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("")
@@ -18,11 +21,10 @@ export default function LoginPage() {
     }
 
     return (
-        <div className="flex w-full h-screen">
             <div style={{ letterSpacing: '-0.05em' }} className="flex flex-1 justify-center items-center flex-col text-gray-800 pt-8 pb-20 h-full">
-                <div className="flex flex-col w-full px-50 h-full">
-                    <Logo className="text-2xl font-bold cursor-default"/>
-                        <div className="flex flex-col gap-10 mt-auto">
+                <div className="flex flex-col justify-center w-full px-50 h-full">
+                    <Logo className="text-2xl font-bold cursor-default absolute top-0 left-0 mt-8 ml-8"/>
+                        <div className="flex flex-col gap-10">
                             <div className="flex flex-col flex-wrap gap-2">
                                 <div className="font-bold text-4xl text-pink-500 cursor-default">
                                     안녕하세요!
@@ -39,6 +41,7 @@ export default function LoginPage() {
                                 onChange={(e) => setFirstName(e.target.value)}
                                 placeholder="First name"
                                 type="text"
+                                required={true}
                             />
 
                             <Input 
@@ -48,6 +51,7 @@ export default function LoginPage() {
                                 onChange={(e) => setLastName(e.target.value)}
                                 placeholder="Last name"
                                 type="text"
+                                required={true}
                             />
 
                             <Input 
@@ -57,6 +61,7 @@ export default function LoginPage() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 placeholder="Email"
                                 type="email"
+                                required={true}
                             />
 
                             <Input 
@@ -66,13 +71,23 @@ export default function LoginPage() {
                                 onChange={(e) => setPassword(e.target.value)}
                                 placeholder="Password"
                                 type="password"
+                                required={true}
                             />
 
-                            <Checkbox 
-                                label="I agree to the terms and conditions."
-                                onChange={(e) => setChecked(e.target.checked)}
-                                checked={checked}
-                            />
+                            <div className="flex flex-col items-start gap-2">
+                                <Checkbox 
+                                    label="I agree to the terms and conditions."
+                                    onChange={(e) => setChecked(e.target.checked)}
+                                    checked={checked}
+                                />
+                                <button
+                                    type="button"
+                                    className="text-pink-500 font-semibold cursor-pointer underline"
+                                    onClick={onClick}
+                                >
+                                    Sign In instead
+                                </button>
+                            </div>
 
                             <Button
                                 disabled={!checked}
@@ -84,7 +99,6 @@ export default function LoginPage() {
                     </div>
                 </div>
             </div>
-            <MotionImageSlider />
-        </div>
+        
     )
 }

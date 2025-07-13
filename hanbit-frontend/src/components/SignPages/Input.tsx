@@ -5,6 +5,7 @@ type InputProps = {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
+    required?: boolean;
 };
 
 const Input: React.FC<InputProps> = ({
@@ -13,7 +14,8 @@ const Input: React.FC<InputProps> = ({
     name, 
     value, 
     onChange, 
-    placeholder
+    placeholder,
+    required
 }) => {
     return (
         <div className="flex flex-col mb-4 text-xl gap-2 w-full">
@@ -31,6 +33,7 @@ const Input: React.FC<InputProps> = ({
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
+                required={required}
              />
         </div>
     );
