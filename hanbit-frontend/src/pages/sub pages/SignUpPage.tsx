@@ -27,10 +27,10 @@ export default function SignUpPage({onClick}: SignUpPageProps) {
                         <div className="flex flex-col gap-10">
                             <div className="flex flex-col flex-wrap gap-2">
                                 <div className="font-bold text-4xl text-pink-500 cursor-default">
-                                    안녕하세요!
+                                    こんにちは!
                                 </div>
                                 <div className="font-semibold text-xl cursor-default">
-                                    Sign up to embrace the unique way of communicating with South Koreans.
+                                    Sign up to embrace the unique way of communicating with Japanese people.
                                 </div>
                             </div>
                         <form onSubmit={handleSubmit} className="flex justify-center items-right flex-col w-full">
