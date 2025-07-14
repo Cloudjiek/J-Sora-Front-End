@@ -2,15 +2,28 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react"
 
 const images = [
-    "./src/assets/bridge.jpg",
-    "./src/assets/building.jpg",
-    "./src/assets/city.jpg",
-    "./src/assets/street.jpg",
-    "./src/assets/street2.jpg",
-    "./src/assets/tall_building.jpg",
-    "./src/assets/tower.jpg",
+    "./src/assets/FUKUOKA-fukuoka_tower.jpg",
+    "./src/assets/HIROSHIMA-peace_memorial_park.jpg",
+    "./src/assets/KIOTO-golden_pavilion.jpg",
+    "./src/assets/OSAKA-osaka_castle.jpg",
+    "./src/assets/TOKYO-tokyo_tower.jpg",
 ]
 
+const images_description_en = [
+    "Fukuoka Tower - Fukuoka",
+    "Peace Memorial Park - Hiroshima",
+    "Golden Pavilion - Kioto",
+    "Osaka Castle - Osaka",
+    "Tokyo Tower - Tokyo"
+]
+
+const images_description_jp = [
+    "福岡タワー (ふくおかタワー) - 福岡 (ふくおか)",
+    "平和記念公園 (へいわきねんこうえん) - 広島 (ひろしま)",
+    "金閣寺 (きんかくじ) - 京都 (きょうと)",
+    "大阪城 (おおさかじょう) - 大阪 (おおさか)",
+    "東京タワー (とうきょうタワー) - 東京 (とうきょう)"
+];
 export default function MotionImageSlider() {
     const [index, setIndex] = useState(0);
 
@@ -27,7 +40,7 @@ export default function MotionImageSlider() {
             <motion.img 
                 key={index}
                 src={images[index]}
-                alt="image slider"
+                alt={images_description_en[index]}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1.5 }}

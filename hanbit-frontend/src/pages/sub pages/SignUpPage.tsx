@@ -2,7 +2,7 @@ import { useState } from "react";
 import Input from "../../components/SignPage/Input";
 import Checkbox from "../../components/SignPage/Checkbox";
 import Button from "../../components/SignPage/Button";
-import Logo from "../../components/SignPage/Logo";
+import Logo from "../../components/Logo";
 
 type SignUpPageProps = {
     onClick: React.MouseEventHandler<HTMLButtonElement>;
